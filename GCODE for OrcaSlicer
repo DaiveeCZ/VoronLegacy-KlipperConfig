@@ -1,0 +1,37 @@
+; Start gcode for silent mod (lower stepper current, noise and torque).
+; Slower print speed.
+
+SWITCH_SILENT
+G28                        ;home all axis
+M140 S[first_layer_bed_temperature] ; set bed temp
+M190 S[first_layer_bed_temperature] ; wait for bed temp
+BED_MESH_CALIBRATE
+Smart_Park  
+M104 S[first_layer_temperature] ; set extruder temp
+M109 S[first_layer_temperature] ; wait for extruder temp
+G21                        ;set units to millimetres
+G90                        ;set to absolute positioning
+M106 S0                    ;set fan speed to zero (turned off)
+VORON_PURGE
+
+
+; Start gcode for perfomance mod (higher stepper current, noise and torque).
+; Faster print speed.
+
+SWITCH_PERFOMANCE
+G28                        ;home all axis
+M140 S[first_layer_bed_temperature] ; set bed temp
+M190 S[first_layer_bed_temperature] ; wait for bed temp
+BED_MESH_CALIBRATE
+Smart_Park
+M104 S[first_layer_temperature] ; set extruder temp
+M109 S[first_layer_temperature] ; wait for extruder temp
+G21                        ;set units to millimetres
+G90                        ;set to absolute positioning
+M106 S0                    ;set fan speed to zero (turned off)
+VORON_PURGE
+
+
+;End gcode (using klipper macros).
+
+END_PRINT
