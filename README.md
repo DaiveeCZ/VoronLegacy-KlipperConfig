@@ -10,9 +10,12 @@ Printer specs:
 - Afterburner toolhead (Direct-Drive)
 - Phaetus Dragon ST hotend
 - Inductive probe PL-xxx
-- X and Y sensorless homing.
-- RPi4 as secondary MCU.
+- X and Y sensorless homing
+- RPi4 as secondary MCU
 - RepRap LCD 2004
+- TMC2209 on X,Y and E
+- TMC2208 on Z.
+- Dual Z drivers
 
 Features: 
 
