@@ -23,7 +23,16 @@ Features:
 - Adaptive meshing
 - Adaptive purging
 - Smart park 
-  
-Used plugins: KAMP, TMC Auto Tune.
+- Auto shutdown printer after print finished and hotend is below 50C. Via smart plug with Tasmota FW.*  
+
+Used pluggins: KAMP, TMC Auto Tune, auto-power-off-klipper
+
+To-Do list:
+
+- Webcam support
+- LED stripe control via RPi GPIO
+- Resonance Compensation aka Input shaper with ADXL345
+- Shutdown RPi before turning off Tasmota smart plug.*
+
 
   
